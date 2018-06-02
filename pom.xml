@@ -11,7 +11,9 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <scala.version>2.11.12</scala.version>
+        <scala.version.complete>2.11.12</scala.version.complete>
+        <scala.version.major-minor>2.11</scala.version.major-minor>
+        <spark.version>2.2.1</spark.version>
         <main.class>${project.groupId}.App</main.class>
     </properties>
 
@@ -19,21 +21,21 @@
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
-            <version>${scala.version}</version>
+            <version>${scala.version.complete}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-core_2.11</artifactId>
-            <version>2.2.1</version>
+            <artifactId>spark-core_${scala.version.major-minor}</artifactId>
+            <version>${spark.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-sql_2.11</artifactId>
-            <version>2.2.1</version>
+            <artifactId>spark-sql_${scala.version.major-minor}</artifactId>
+            <version>${spark.version}</version>
         </dependency>
         <dependency>
             <groupId>org.scalatest</groupId>
-            <artifactId>scalatest_2.11</artifactId>
+            <artifactId>scalatest_${scala.version.major-minor}</artifactId>
             <version>3.0.5</version>
             <scope>test</scope>
         </dependency>
