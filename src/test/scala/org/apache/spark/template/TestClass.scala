@@ -1,4 +1,4 @@
-package de.bigdata.spark
+package org.apache.spark.template
 
 import org.scalatest.{FlatSpec, Matchers}
 
